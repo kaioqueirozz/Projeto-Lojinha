@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">Minha Loja</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Jewelery</a></li>
+                <li><a href="#">Men's Clothing</a></li>
+                <li><a href="#">Women's Clothing</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar produtos...">
+            <button>Buscar</button>
+        </div>
+        <div class="cart-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/4/4295.png" alt="Carrinho de Compras" id="cart-toggle"> <span id="count" class="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <div class="product-grid"></div>
+    </main>
+
+    <!-- Cart -->
+    <div id="cart" class="hidden">
+        <div class="cart-header">
+            <h2>Carrinho de Compras</h2>
+            <button id="cart-minimize" class="cart-minimize">&times;</button>
+        </div>
+        <div class="cart-items">
+            
+        </div>
+        <div class="cart-total">
+            <h3>Total: R$ <span id="cart-total-price">0</span></h3>
+            <button>Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="contact-info">
+            <h3>Contato</h3>
+            <p>Email: contato@minhaloja.com</p>
+            <p>Telefone: (11) 1234-5678</p>
+        </div>
+        <div class="social-links">
+            <h3>Siga-nos</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="policies">
+            <h3>Políticas</h3>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Política de Privacidade</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

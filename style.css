@@ -1,0 +1,247 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Header Styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+#header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+#header .nav ul li {
+    display: inline;
+}
+
+#header .nav ul li a {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+}
+
+#header .search-bar input {
+    padding: 5px;
+}
+
+#header .search-bar button {
+    padding: 5px;
+    background-color: #555;
+    color: #fff;
+}
+
+#header .cart-icon {
+    display: flex;
+    align-items: center;
+}
+
+#header .cart-icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#header .cart-icon .cart-count {
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    margin-left: 5px;
+}
+
+#main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    width: calc(33.333% - 20px); /* Ajusta a largura para caber 3 itens por linha */
+    max-width: 300px; /* Garante que os itens não fiquem muito largos */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta a imagem para cobrir o container */
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.product button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin-top: auto;
+}
+
+/* Cart Styles */
+#cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+
+#cart.hidden {
+    transform: translateX(100%);
+}
+
+#cart .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart .cart-header h2 {
+    margin-top: 0;
+}
+
+#cart .cart-minimize {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.cart-item button {
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.8em;
+    max-height: 15vh;
+}
+
+#footer h3 {
+    margin-top: 0;
+}
+
+#footer .contact-info, #footer .social-links, #footer .policies {
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #header {
+        flex-wrap: wrap;
+    }
+
+    #header .logo {
+        margin-bottom: 10px;
+    }
+
+    .product {
+        width: calc(50% - 20px);
+    }
+
+    #cart {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+    }
+
+    .cart-item {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: calc(100% - 20px);
+    }
+}
